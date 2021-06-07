@@ -19,7 +19,7 @@ This Project uses following open source technologies to work properly:
 ***
 ## Databsae ER Diagram:
 ***
-![](sparkify-dimension-model.jpg)
+![](https://github.com/vipulmahiman/sparkify-airflow-pipeline/sparkify-dimension-model.jpg)
 
 ***
 ### Code Deliverables:
@@ -39,28 +39,15 @@ This Project uses following open source technologies to work properly:
 ***
 ## Airflow Pipeline Visual Representation:
 ***
-![](sparkify-airflow-pipeline.jpg)
-
-
+![](https://github.com/vipulmahiman/sparkify-airflow-pipeline/sparkify-airflow-pipeline.jpg)
 
 ***
-### Installation
+### Build and Test on local environment
 ***
-Project requires [python 3.6](https://www.python.org/downloads/release/python-360/) and above to run.
+1. Build a local airflow environment using [airflow docker image](https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html)
+2. Create AWS Redshift cluster using **Create Or Delete Redshift Cluster.ipynb** notebook.
+3. Run DAG from Airflow UI.
 
-##### Step1 - Create DB
- 
-
-<>
-```sh
-$!python create_tables.py
-```
-
-##### Step2 - Run ETL Pipeline to populate DB
-<>
-```sh
-$ !python etl.py
-```
 
 ### License
 
