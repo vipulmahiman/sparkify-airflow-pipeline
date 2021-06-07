@@ -23,6 +23,8 @@ default_args = {
     'email_on_retry': False
 }
 
+def 
+
 dag = DAG('sparkify_etl_dag',
           default_args=default_args,
           description='Load and transform data in Redshift with Airflow',
@@ -75,6 +77,7 @@ load_songplays_table = LoadFactOperator(
 load_user_dimension_table = LoadDimensionOperator(
     task_id='Load_user_dim_table',
     dag=dag,
+    on_success_callback=email_vipul,
     redshift_conn_id="redshift",
     table="users",
     sql = SqlQueries.user_table_insert,
