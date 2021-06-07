@@ -1,5 +1,3 @@
-# Project Summary!
-***
 ## Introduction
 ***
 A music streaming startup, Sparkify, has grown their user base and song database and want to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
@@ -11,13 +9,15 @@ As their data engineer, you are tasked with building an ETL pipeline that extrac
 ***
 This Project uses following open source technologies to work properly:
 
-* [postgreSQL](https://www.postgresql.org/download/) - RDBMS Data Store, Amazon Redshift is technology based on postgreSQL but userf for OLAP (Online Analytical Processing)
+* [PostgreSQL](https://www.postgresql.org/download/) - RDBMS Data Store, Amazon Redshift is technology based on postgreSQL but userf for OLAP (Online Analytical Processing)
 * [Amazon Redshift](https://docs.aws.amazon.com/redshift/index.html/) - Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the cloud. An Amazon Redshift data warehouse is a collection of computing resources called nodes, which are organized into a group called a cluster. Each cluster runs an Amazon Redshift engine and contains one or more databases.
-* [Python](https://www.python.org/downloads/release/python-360/) - Programming language used in this project to build ETL pipelines and following are the libraries used in the project:
+* [Python 3.6](https://www.python.org/downloads/release/python-360/) - Programming language used in this project to build ETL pipelines and following are the libraries used in the project:
     -  [ConfigParser](https://pymotw.com/2/ConfigParser) - Use the ConfigParser module to manage user-editable configuration files for an application. The configuration files are organized into sections, and each section can contain name-value pairs for configuration data. Value interpolation using Python formatting strings is also supported, to build values that depend on one another (this is especially handy for URLs and message strings).
     -  [psycopg2](https://pypi.org/project/psycopg2/) - Psycopg is the most popular PostgreSQL database adapter for the Python programming language. This same adapter can be used to connect to Redshift cluster.
+* [Apache Airflow](https://airflow.apache.org/) - Airflow is a platform to programmatically author, schedule and monitor workflows. Airflow is used to author workflows as Directed Acyclic Graphs (DAGs) of tasks. The Airflow scheduler executes your tasks on an array of workers while following the specified dependencies
+
 ***
-## Databsae ER Diagram:
+## Database ER Diagram:
 ***
 ![](sparkify-dimension-model.jpg)
 
@@ -34,7 +34,7 @@ This Project uses following open source technologies to work properly:
 7. **load_fact.py** Custom Oprator used in the sparkify dag to copy files from staging to redshift fact  table.
 8. **data_quality.py** Custom operator for running data quality checks on the dataset passed. 
 9. **Create Or Delete Redshift Cluster.ipynb** Notebook to create Redshift cluster using AWS SDK. This cluster is used to test the pipeline on S3 and Redshift.
-10. **README.md** provides discussion on your project.
+10. **README.md** 
 
 ***
 ## Airflow Pipeline Visual Representation:
