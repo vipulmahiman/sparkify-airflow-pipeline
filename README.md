@@ -39,7 +39,7 @@ This Project uses following open source technologies to work properly:
 ***
 ## Airflow Pipeline Visual Representation:
 ***
-![](https://github.com/vipulmahiman/sparkify-airflow-pipeline/sparkify-airflow-pipeline.png)
+![](sparkify-airflow-pipeline.png)
 
 ***
 ### Build and Test on local environment
