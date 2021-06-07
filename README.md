@@ -19,7 +19,7 @@ This Project uses following open source technologies to work properly:
 ***
 ## Databsae ER Diagram:
 ***
-![](https://github.com/vipulmahiman/sparkify-airflow-pipeline/sparkify-dimension-model.jpg)
+![](sparkify-dimension-model.jpg)
 
 ***
 ### Code Deliverables:
@@ -39,7 +39,7 @@ This Project uses following open source technologies to work properly:
 ***
 ## Airflow Pipeline Visual Representation:
 ***
-![](https://github.com/vipulmahiman/sparkify-airflow-pipeline/sparkify-airflow-pipeline.jpg)
+![](https://github.com/vipulmahiman/sparkify-airflow-pipeline/sparkify-airflow-pipeline.png)
 
 ***
 ### Build and Test on local environment
