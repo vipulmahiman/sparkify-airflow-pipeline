@@ -6,7 +6,13 @@ from helpers import SqlQueries
 
 
 class LoadFactOperator(BaseOperator):
-
+"""
+    Custom Operator to load from staging to Fact table in Redshift
+    
+    :redshift_conn_id  Redshift Connection Id Object
+    :table:            Redshift staging table.
+    :sql:              Sql for selection from staging table
+"""    
     ui_color = '#F98866'
 
     @apply_defaults

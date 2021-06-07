@@ -5,6 +5,13 @@ from airflow.utils.decorators import apply_defaults
 from helpers import SqlQueries as s
 
 class LoadDimensionOperator(BaseOperator):
+"""
+    Custom Operator to load from staging to dimension table in Redshift
+    
+    :redshift_conn_id  Redshift Connection Id Object
+    :table:            Redshift staging table.
+    :sql:              Sql for selection from staging table
+"""    
 
     ui_color = '#80BD9E'
 

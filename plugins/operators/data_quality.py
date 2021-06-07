@@ -5,6 +5,12 @@ from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 
 class DataQualityOperator(BaseOperator):
+"""
+    Custom Operator to check for data quality
+    
+    :redshift_conn_id  Redshift Connection Id Object
+    :check_list:       An array of data quality checks and expected outputs match.
+"""    
 
     ui_color = '#89DA59'
 

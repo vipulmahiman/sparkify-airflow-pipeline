@@ -4,6 +4,16 @@ from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 
 class StageToRedshiftOperator(BaseOperator):
+"""
+    Custom Operator to load from AWS S3 to Redshift staging table
+    
+    :redshift_conn_id  Redshift Connection Id Object
+    :aws_iam_role:     AWS IAM Role having access on S3 bucket
+    :table:            Redshift staging table.
+    :s3_bucket:        S3 bucket
+    :s3_key:           Files Directory.
+    :json:             Schema
+"""    
     ui_color = '#358140'
     template_fields = ("s3_key",)
     copy_sql    = """
